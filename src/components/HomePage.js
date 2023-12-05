@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogList from "./BlogList";
 import "../index.css";
+import HomeNav from "./HomeNav";
 
 const postAPI = "http://localhost:8001/posts";
 
@@ -15,6 +16,7 @@ function HomePage() {
 
   return (
     <div>
+      <HomeNav />
       <BlogList posts={posts} />
     </div>
   );

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import image from "../img/flower-and-flavor-logo.png";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -23,33 +21,24 @@ const Navbar = () => {
 
   return (
     <nav className="relative bg-custom-peach flex items-center justify-between mx-auto max-w-[1240px] px-4 py-2">
-      <Link to="/">
-        <img src={image} alt="Flowers & Flavor Logo" className="z-30 h-28 md:h-40" />
-      </Link>
-
-      <ul className="hidden md:flex justify-center flex-1">
+      <img
+        src={image}
+        alt="Flowers & Flavor Logo"
+        className="z-30 h-28 md:h-40"
+      />
+      {/* Desktop menu. Hidden on small screens */}
+      <ul className="hidden md:flex justify-end flex-1">
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          <Link to="/">Home</Link>
+          Home
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          <Link to="/about">About</Link>
+          About
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          <Link to="/contact">Contact</Link>
+          Contact
         </li>
       </ul>
-
-      <div className="flex items-center z-40">
-        <input
-          type="text"
-          placeholder="Search..."
-          className=" p-2 border-2 border-custom-darker-brown rounded-md"
-        />
-        <div className="md:hidden ml-4" onClick={handleNav}>
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-        </div>
-      </div>
-
+      {/* This section is the mobile menu. only visible on small screens */}
       <ul
         className={`absolute md:hidden bg-custom-peach flex flex-col items-center w-full left-0 top-full transform ${
           nav ? "translate-x-0" : "-translate-x-full"
