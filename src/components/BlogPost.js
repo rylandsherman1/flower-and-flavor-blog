@@ -3,7 +3,6 @@ import "../index.css";
 
 const BlogPost = ({ id, title, date, content, likes, addLike, removePost, onEditClick, onContentUpdate }) => {
   const [like, setLike] = useState(false);
-  const [count, setCount] = useState(0);
   const [isEditing, setIsEditing] = useState(false);
   const [editedContent, setEditedContent] = useState(content);
   const [updatedTitle, setUpdatedTitle] = useState(title);
