@@ -51,12 +51,14 @@ const HomePage = () => {
       });
     } else {
 
+      const newFormData = {...formData, likes: 0};
+
       fetch(postAPI, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(newFormData),
       }).then((response) => {
         if (response.ok) {
           refetchPosts();
