@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.about-content {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 60px;
+  background-color: #a88782; 
+  border-radius: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); 
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+}
