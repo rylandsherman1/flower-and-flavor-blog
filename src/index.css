@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Global styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,21 +23,28 @@ a {
   text-decoration: none;
 }
 
-/* Centering Content, dark brown container */
-.about-content {
+/* Container for centering content */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles for AboutPage content */
+.about-content {
+  margin-top: 40px;
   padding: 60px;
-  background-color: #a88782; 
+  background-color: #a88782;
   border-radius: 40px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  color: #000000;
 }
 
-/* Main Content */
-.main-content {
-  text-align: left;
+.blog-list {
+  margin-top: 40px;
 }
-
+/* Styles for BlogPost */
 .blog-post {
   background-color: #a88782;
   padding: 20px 36px;
@@ -57,7 +65,58 @@ a {
   margin: 32px 0;
 }
 
+.contact-content {
+  margin-top: 40px;
+  padding: 60px;
+  background-color: #a88782;
+  border-radius: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* Header styling */
 .header {
   font-size: 3rem;
   font-weight: bold;
+}
+
+/* Custom styles for App component */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
