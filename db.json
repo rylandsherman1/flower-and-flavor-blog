@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Secret of Perfect Croissants",
+      "date": "2023-05-01",
+      "content": "Discover the art of making buttery, flaky croissants at home..."
+    },
+    {
+      "id": 2,
+      "title": "Exploring the World of Artisanal Sourdough",
+      "date": "2023-05-15",
+      "content": "Sourdough bread has been a beloved staple for centuries..."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password2"
+    }
+  ],
+  "contacts": []
+}
