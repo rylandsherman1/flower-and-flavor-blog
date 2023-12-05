@@ -11,7 +11,7 @@ const Navbar = () => {
         setNav(false);
       }
     };
-
+// quickchange
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [nav]);
