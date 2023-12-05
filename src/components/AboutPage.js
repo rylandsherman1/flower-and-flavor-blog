@@ -1,7 +1,9 @@
 import React from "react";
+import "../index.css";
 
 const AboutPage = () => {
   return (
+    <div className="container">
       <div className="about-content">
         <h2 className="header">Welcome to Flowers and Flavor!</h2>
         <p>
@@ -27,6 +29,7 @@ const AboutPage = () => {
           delightful world of pastries and prose.
         </p>
       </div>
+    </div>
   );
 };
 

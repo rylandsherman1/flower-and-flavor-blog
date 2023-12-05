@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 import BlogList from "./BlogList";
+import "../index.css";
 
-const postAPI = "http://localhost:8001/posts"
+const postAPI = "http://localhost:8001/posts";
 
-function HomePage(){
+function HomePage() {
+  const [posts, setPosts] = useState([]);
 
-const [posts, setPosts] = useState([])
-
-useEffect(() => {
-  fetch(postAPI)
-  .then(res => res.json())
-  .then(setPosts)
-},[])
-
-
+  useEffect(() => {
+    fetch(postAPI)
+      .then((res) => res.json())
+      .then(setPosts);
+  }, []);
 
   return (
     <div>
       <BlogList posts={posts} />
     </div>
   );
-  }   
+}
 
 export default HomePage;
-
-
-
-
