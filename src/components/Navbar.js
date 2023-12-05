@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import image from "../img/flower-and-flavor-logo.png";
 
 const Navbar = () => {
@@ -21,21 +22,23 @@ const Navbar = () => {
 
   return (
     <nav className="relative bg-custom-peach flex items-center justify-between mx-auto max-w-[1240px] px-4 py-2">
-      <img
-        src={image}
-        alt="Flowers & Flavor Logo"
-        className="z-30 h-28 md:h-40"
-      />
+      <Link to="/">
+        <img
+          src={image}
+          alt="Flowers & Flavor Logo"
+          className="z-30 h-28 md:h-40"
+        />
+      </Link>
       {/* Desktop menu. Hidden on small screens */}
       <ul className="hidden md:flex justify-end flex-1">
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          Home
+          <Link to="/">Home</Link>
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          About
+          <Link to="/about">About</Link>
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          Contact
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       {/* This section is the mobile menu. only visible on small screens */}
@@ -45,13 +48,13 @@ const Navbar = () => {
         } transition duration-300 ease-in-out z-20`}
       >
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          Home
+          <Link to="/">Home</Link>
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          About
+          <Link to="/about">About</Link>
         </li>
         <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer">
-          Contact
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
