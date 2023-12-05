@@ -50,9 +50,8 @@ const Navbar = () => {
         </ul>
         {/* Mobile menu */}
         <ul
-          className={`absolute md:hidden bg-custom-peach flex flex-col items-center w-full left-0 top-full transform ${
-            nav ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute md:hidden bg-custom-peach flex flex-col items-center w-full left-0 top-full transform ${nav ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/">Home</Link>

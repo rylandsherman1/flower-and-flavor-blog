@@ -29,6 +29,18 @@
       "content": "test",
       "date": "2023-12-12",
       "id": 5
+    },
+    {
+      "title": "Test",
+      "content": "Another Test",
+      "date": "2023-12-07",
+      "id": 6
+    },
+    {
+      "title": "New Blog",
+      "content": "Stuff n things",
+      "date": "2023-12-07",
+      "id": 7
     }
   ],
   "users": [
