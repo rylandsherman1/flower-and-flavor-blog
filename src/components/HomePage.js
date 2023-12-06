@@ -5,8 +5,10 @@ import HomeNav from "./HomeNav";
 
 const postAPI = "http://localhost:8001/posts";
 
-function HomePage() {
+const HomePage = () => {
   const [posts, setPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
     fetch(postAPI)
@@ -45,12 +47,30 @@ function HomePage() {
       })
   };
 
+  const handleSearch = (searchText) => {
+    setHasSearched(true);
+    const lowerCaseSearchInput = searchText.toLowerCase();
+
+    if (lowerCaseSearchInput.length === 0) {
+      setFilteredPosts([]);
+      setHasSearched(false);
+    } else {
+      setHasSearched(true);
+      const filtered = posts.filter(
+        (post) =>
+          post.title.toLowerCase().includes(lowerCaseSearchInput) ||
+          post.content.toLowerCase().includes(lowerCaseSearchInput)
+      );
+
+      setFilteredPosts(filtered);
+    }
+  };
   return (
     <div> 
-      <HomeNav onPostSubmit={handlePostSubmit}/>
-      <BlogList posts={posts} />
+      <HomeNav onSearch={handleSearch} onPostSubmit={handlePostSubmit} />
+      <BlogList posts={hasSearched ? filteredPosts : posts} />
     </div>
   );
-}
+};
 
 export default HomePage;
