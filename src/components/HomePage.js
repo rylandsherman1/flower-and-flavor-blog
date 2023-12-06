@@ -46,7 +46,7 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <div> 
       <HomeNav onPostSubmit={handlePostSubmit}/>
       <BlogList posts={posts} />
     </div>
