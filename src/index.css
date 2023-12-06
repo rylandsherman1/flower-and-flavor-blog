@@ -96,6 +96,33 @@ p {
   font-weight: bold;
 }
 
+.form-group {
+  margin-bottom: 15px; 
+}
+
+.label {
+  display: inline-block;
+  width: 250px; 
+  text-align: right;
+  margin-right: 10px; 
+}
+
+.input {
+  width: 500px; 
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  background-color: #33110c; 
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
 /* like button and trash button styling */
 .like-button,
 .trash-button {
