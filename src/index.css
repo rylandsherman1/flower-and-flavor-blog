@@ -97,24 +97,24 @@ p {
 }
 
 .form-group {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .label {
   display: inline-block;
-  width: 250px; 
+  width: 250px;
   text-align: right;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .input {
-  width: 500px; 
+  width: 500px;
   padding: 8px;
   box-sizing: border-box;
 }
 
 .submit-button {
-  background-color: #33110c; 
+  background-color: #33110c;
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
@@ -123,9 +123,9 @@ p {
   cursor: pointer;
 }
 
-/* like button and trash button styling */
+/* like button and delete button styling */
 .like-button,
-.trash-button {
+.delete-button {
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
@@ -133,19 +133,19 @@ p {
   margin-right: 10px;
 }
 
-.trash-button {
+.delete-button {
   font-size: 1.3rem;
 }
 
 .like-button.active {
-  color: #ff3333;
+  color: #d50000;
 }
 
 .details {
   display: flex;
   justify-content: flex-end;
 }
-.trash-button,
+.delete-button,
 .like-button {
   margin-left: 10px;
 }
