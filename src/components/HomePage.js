@@ -16,6 +16,37 @@ const HomePage = () => {
       .then(setPosts);
   }, []);
 
+  const refetchPosts = () => {
+    fetch(postAPI)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Failed to fetch posts");
+        }
+      })
+      .then((data) => setPosts(data))
+      .catch((error) => console.error("Error fetching posts", error));
+  };
+
+  const handlePostSubmit = (formData) => {
+    fetch(postAPI, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // After successful submission, render the posts
+          refetchPosts();
+        } else {
+          throw new Error("Failed to submit blog post");
+        }
+      })
+  };
+
   const handleSearch = (searchText) => {
     setHasSearched(true);
     const lowerCaseSearchInput = searchText.toLowerCase();
@@ -34,10 +65,9 @@ const HomePage = () => {
       setFilteredPosts(filtered);
     }
   };
-
   return (
-    <div>
-      <HomeNav onSearch={handleSearch} />
+    <div> 
+      <HomeNav onSearch={handleSearch} onPostSubmit={handlePostSubmit} />
       <BlogList posts={hasSearched ? filteredPosts : posts} />
     </div>
   );
