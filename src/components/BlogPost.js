@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import "../index.css";
 
-const BlogPost = ({ title, date, content }) => {
-  const [clicked, setClicked] = useState(false);
+const BlogPost = ({ id, title, date, content, removePost }) => {
+  const [like, setLike] = useState(false);
+  const [count, setCount] = useState(0);
+
+  const handleButtonClick = () => {
+    setCount(count + 1);
+    setLike(true);
+  };
 
   return (
     <div className="blog-post">
@@ -11,19 +17,24 @@ const BlogPost = ({ title, date, content }) => {
       <div className="blog-post-content">{content}</div>
 
       <div className="details">
-        {clicked ? (
-          <button
-            className="like-button active"
-            onClick={() => setClicked(false)}
-          >
-            ♥
+        {like ? (
+          <button className="like-button active" onClick={handleButtonClick}>
+            {count}♥
           </button>
         ) : (
-          <button className="like-button" onClick={() => setClicked(true)}>
+          <button className="like-button" onClick={() => setLike(true)}>
             ♡
           </button>
         )}
-        <button className="trash-button">🗑️</button>
+
+        <button
+          className="delete-button"
+          onClick={() => {
+            removePost(id);
+          }}
+        >
+          🗑
+        </button>
       </div>
     </div>
   );

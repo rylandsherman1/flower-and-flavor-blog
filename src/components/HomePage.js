@@ -36,15 +36,18 @@ const HomePage = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          // After successful submission, render the posts
-          refetchPosts();
-        } else {
-          throw new Error("Failed to submit blog post");
-        }
-      })
+    }).then((response) => {
+      if (response.ok) {
+        // After successful submission, render the posts
+        refetchPosts();
+      } else {
+        throw new Error("Failed to submit blog post");
+      }
+    });
+  };
+
+  const removePost = (id) => {
+    setPosts(posts.filter((post) => post.id !== id));
   };
 
   const handleSearch = (searchText) => {
@@ -66,9 +69,12 @@ const HomePage = () => {
     }
   };
   return (
-    <div> 
+    <div>
       <HomeNav onSearch={handleSearch} onPostSubmit={handlePostSubmit} />
-      <BlogList posts={hasSearched ? filteredPosts : posts} />
+      <BlogList
+        posts={hasSearched ? filteredPosts : posts}
+        removePost={removePost}
+      />
     </div>
   );
 };
