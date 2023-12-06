@@ -12,13 +12,13 @@ const HomeNav = ({ onPostSubmit, onSearch }) => {
   return (
     <div className="container">
       <div className="flex flex-col md:flex-row justify-between items-center py-4 px-6">
-        {/* Navigation Buttons */}
-        <div className="flex mb-4 md:mb-0 space-x-4">
+        <div className="w-full md:w-3/4 mb-4 md:mb-0">
+          {" "}
           <BlogSubmitForm onPostSubmit={onPostSubmit} />
         </div>
 
         {/* Search Input */}
-        <div className="flex border-2 border-custom-darker-brown rounded-md">
+        <div className="flex border-2 border-custom-darker-brown rounded-md mt-4 md:mt-0 md:ml-4">
           <input
             type="text"
             placeholder="Search..."
