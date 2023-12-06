@@ -39,6 +39,10 @@ p {
   font-size: 1.5rem;
 }
 
+.blog-post-content {
+  font-size: 1.5rem;
+}
+
 /* Container for centering content */
 .container {
   max-width: 1200px;
@@ -117,4 +121,31 @@ p {
   border: none;
   border-radius: 25px;
   cursor: pointer;
+}
+
+/* like button and trash button styling */
+.like-button,
+.trash-button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  margin-right: 10px;
+}
+
+.trash-button {
+  font-size: 1.3rem;
+}
+
+.like-button.active {
+  color: #ff3333;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-end;
+}
+.trash-button,
+.like-button {
+  margin-left: 10px;
 }
