@@ -33,7 +33,7 @@ const Navbar = () => {
         </Link>
         {/* Hamburger Menu Icon */}
         <div className="md:hidden ml-4" onClick={handleNav}>
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </div>
 
         {/* Desktop menu. Hidden on small screens */}

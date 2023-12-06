@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 
-const HomeNav = () => {
+const HomeNav = ({ onSearch }) => {
+  const searchInputRef = useRef(null);
+
+  const handleSearch = () => {
+    const searchText = searchInputRef.current.value.toLowerCase();
+    onSearch(searchText);
+  };
   return (
     <div className="container">
       <div className="flex flex-col md:flex-row justify-between items-center py-4 px-6">
@@ -22,7 +28,13 @@ const HomeNav = () => {
 
         {/* Search Input */}
         <div className="flex border-2 border-custom-darker-brown rounded-md">
-          <input type="text" placeholder="Search..." className="p-2 w-full" />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="p-2 w-full"
+            ref={searchInputRef}
+            onChange={handleSearch}
+          />
         </div>
       </div>
     </div>
