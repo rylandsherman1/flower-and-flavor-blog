@@ -8,6 +8,7 @@ module.exports = {
         "custom-darker-brown": "#33110c",
         "custom-peach": "#ffccc4",
         "custom-brown": "#66342c",
+        "custom-post-bg": "#a88782",
       },
     },
   },

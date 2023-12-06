@@ -37,7 +37,7 @@ const BlogSubmitForm = ({ onPostSubmit }) => {
 
       {showForm && (
         <form
-          className="mt-4 p-4 bg-white rounded shadow"
+          className="mt-4 p-4 bg-custom-post-bg rounded shadow"
           onSubmit={handleSubmit}
         >
           <div className="mb-4">
