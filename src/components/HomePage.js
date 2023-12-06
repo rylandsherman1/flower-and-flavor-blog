@@ -16,6 +16,7 @@ function HomePage() {
 
   return (
     <div>
+      
       <HomeNav />
       <BlogList posts={posts} />
     </div>
