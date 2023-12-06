@@ -21,6 +21,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    window.alert("Form submitted successfully, we will get back to you as soon as possible.")
     setFormData({
       firstName: "",
       lastName: "",
