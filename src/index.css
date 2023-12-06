@@ -113,3 +113,12 @@ p {
 .like-button.active {
   color: #ff3333;
 }
+
+.details {
+  display: flex;
+  justify-content: flex-end;
+}
+.trash-button,
+.like-button {
+  margin-left: 10px;
+}
