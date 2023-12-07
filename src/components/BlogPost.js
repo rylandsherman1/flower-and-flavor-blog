@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../index.css";
 
+
+
 const BlogPost = ({ id, title, date, content, removePost }) => {
   const [like, setLike] = useState(false);
   const [count, setCount] = useState(0);
@@ -9,6 +11,15 @@ const BlogPost = ({ id, title, date, content, removePost }) => {
     setCount(count + 1);
     setLike(true);
   };
+
+const deletePost = () => {
+  fetch(`http://localhost:8001/posts/${id}`, {
+    method: "DELETE"
+  }).then(() => {
+    removePost(id)
+  })
+  
+}
 
   return (
     <div className="blog-post">
@@ -29,9 +40,7 @@ const BlogPost = ({ id, title, date, content, removePost }) => {
 
         <button
           className="delete-button"
-          onClick={() => {
-            removePost(id);
-          }}
+          onClick={deletePost}
         >
           🗑
         </button>
