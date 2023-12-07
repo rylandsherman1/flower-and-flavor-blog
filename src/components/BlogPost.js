@@ -56,7 +56,35 @@ const BlogPost = ({
     <div className="blog-post">
       <h2 className="blog-post-title">{title}</h2>
       <p className="blog-post-date">{date}</p>
-
+      {!isEditing ? (
+        <p className="blog-post-content">{content}</p>
+      ) : (
+        <div className="p-4 bg-custom post-bg rounded">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              value={updatedTitle}
+              onChange={(e) => setUpdatedTitle(e.target.value)}
+              placeholder="Title"
+              className="input border rounded w-full py-2 px-3"
+            />
+            <input
+              type="date"
+              value={updatedDate}
+              onChange={(e) => setUpdatedDate(e.target.value)}
+              placeholder="Date"
+              className="input border rounded w-full py-2 px-3"
+            />
+          </div>
+          <textarea
+            value={editedContent}
+            onChange={(e) => setEditedContent(e.target.value)}
+            onKeyDown={handleUpdatedDone}
+            className="mt-4 border rounded w-full py-2 px-3"
+            placeholder="Content"
+          />
+        </div>
+      )}
       <div className="details">
         <p className="blog-post-likes">{likes}</p>
 
@@ -76,34 +104,6 @@ const BlogPost = ({
           ✎
         </button>
       </div>
-
-      {isEditing && (
-        <div className="p-4 bg-custom post-bg rounded">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
-              type="text"
-              value={updatedTitle}
-              onChange={(e) => setUpdatedTitle(e.target.value)}
-              placeholder="Title"
-              className="input border rounded w-full py-2 px-3"
-            />
-            <input
-              type="text"
-              value={updatedDate}
-              onChange={(e) => setUpdatedDate(e.target.value)}
-              placeholder="Date"
-              className="input border rounded w-full py-2 px-3"
-            />
-          </div>
-          <textarea
-            value={editedContent}
-            onChange={(e) => setEditedContent(e.target.value)}
-            onKeyDown={handleUpdatedDone}
-            className="mt-4 border rounded w-full py-2 px-3"
-            placeholder="Content"
-          />
-        </div>
-      )}
     </div>
   );
 };
