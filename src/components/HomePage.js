@@ -84,6 +84,17 @@ const HomePage = () => {
     setPosts(posts.filter((post) => post.id !== id));
   };
 
+  const addLike = (id) => {
+    setPosts(posts.map(post => {
+      if (post.id === id) {
+        return { ...post, likes: parseInt(post.likes, 10) + 1 }; 
+      }
+      return post; 
+    }));
+  };
+  
+
+
   const handleSearch = (searchText) => {
     setHasSearched(true);
     const lowerCaseSearchInput = searchText.toLowerCase();
@@ -111,6 +122,7 @@ const HomePage = () => {
         removePost={removePost}
         onEditClick={handleEditClick}
         onContentUpdate={handleContentUpdate}
+        addLike={addLike}
       />
     </div>
   );

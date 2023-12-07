@@ -21,7 +21,22 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    window.alert("Form submitted successfully, we will get back to you as soon as possible.")
+
+    fetch("http://localhost:8001/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((submittedContact) => {
+        console.log("Contact successfully submitted:", submittedContact);
+        window.alert(
+          "Form submitted successfully, we will get back to you as soon as possible."
+        );
+      });
+
     setFormData({
       firstName: "",
       lastName: "",
@@ -138,5 +153,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
-
