@@ -4,49 +4,50 @@
       "id": 1,
       "title": "The Secret of Perfect Croissants",
       "date": "2023-05-01",
-      "content": "Uncover the enchanting process of creating the perfect croissants at home. From crafting the flaky layers to achieving a buttery richness that will transport you to a French patisserie, this guide delves into the art and science of croissant perfection. Get ready to embark on a delicious journey that will leave your kitchen filled with the irresistible aroma of freshly baked croissants."
-      ,
+      "content": "Uncover the enchanting process of creating the perfect croissants at home. From crafting the flaky layers to achieving a buttery richness that will transport you to a French patisserie, this guide delves into the art and science of croissant perfection. Get ready to embark on a delicious journey that will leave your kitchen filled with the irresistible aroma of freshly baked croissants.",
       "likes": 39
     },
     {
       "id": 2,
       "title": "Exploring the World of Artisanal Sourdough",
       "date": "2023-05-15",
-      "content": "Embark on a journey through the fascinating world of artisanal sourdough bread. From creating a robust sourdough starter to achieving the perfect crust and chewy texture, this exploration into the heart of sourdough will ignite your passion for traditional baking. Discover the history, science, and diverse flavors of sourdough as you master the craft of crafting your own artisanal loaves."
-      ,
+      "content": "Embark on a journey through the fascinating world of artisanal sourdough bread. From creating a robust sourdough starter to achieving the perfect crust and chewy texture, this exploration into the heart of sourdough will ignite your passion for traditional baking. Discover the history, science, and diverse flavors of sourdough as you master the craft of crafting your own artisanal loaves.",
       "likes": 24
     },
     {
       "id": 3,
       "title": "Perfecting the Art of Baking: Mastering the Chocolate Chip Cookie",
       "date": "2023-05-20",
-      "content": "Dive deep into the world of baking as we unravel the secrets behind the iconic chocolate chip cookie. This comprehensive guide goes beyond the basics, revealing the nuances of achieving that perfect balance of crispy edges and chewy centers. Learn the science behind ingredient ratios, baking temperatures, and the art of choosing the finest chocolate. Elevate your baking skills and treat yourself to the ultimate chocolate chip cookie experience."
-      ,
+      "content": "Dive deep into the world of baking as we unravel the secrets behind the iconic chocolate chip cookie. This comprehensive guide goes beyond the basics, revealing the nuances of achieving that perfect balance of crispy edges and chewy centers. Learn the science behind ingredient ratios, baking temperatures, and the art of choosing the finest chocolate. Elevate your baking skills and treat yourself to the ultimate chocolate chip cookie experience.",
       "likes": 30
     },
     {
       "id": 4,
       "title": "The Art of Decadent Cupcakes: A Symphony of Flavors",
       "date": "2023-06-05",
-      "content": "Indulge your senses in the delightful world of decadent cupcakes. From classic flavors to innovative combinations, this guide will take you on a tantalizing journey of cupcake creation. Learn the secrets of achieving the perfect cupcake texture, frosting like a pro, and crafting stunning decorations. Elevate your baking repertoire and delight friends and family with these irresistible bite-sized treats."
-      ,
+      "content": "Indulge your senses in the delightful world of decadent cupcakes. From classic flavors to innovative combinations, this guide will take you on a tantalizing journey of cupcake creation. Learn the secrets of achieving the perfect cupcake texture, frosting like a pro, and crafting stunning decorations. Elevate your baking repertoire and delight friends and family with these irresistible bite-sized treats.",
       "likes": 18
     },
     {
       "id": 5,
       "title": "Rustic Elegance: Mastering the Art of Rustic Bread",
       "date": "2023-06-15",
-      "content": "Experience the rustic charm of artisanal bread with our in-depth guide to mastering the art of rustic loaves. From selecting the finest grains to creating a crusty exterior and chewy interior, this tutorial will guide you through the steps of creating rustic bread that embodies simplicity and elegance. Bring the warmth of a traditional bakery to your home kitchen and savor the authentic flavors of rustic bread done right."
-      ,
+      "content": "Experience the rustic charm of artisanal bread with our in-depth guide to mastering the art of rustic loaves. From selecting the finest grains to creating a crusty exterior and chewy interior, this tutorial will guide you through the steps of creating rustic bread that embodies simplicity and elegance. Bring the warmth of a traditional bakery to your home kitchen and savor the authentic flavors of rustic bread done right.",
       "likes": 22
     },
     {
       "id": 6,
       "title": "Beyond the Basics: Advanced Pastry Techniques Unveiled",
       "date": "2023-07-01",
-      "content": "Elevate your pastry skills to new heights as we delve into advanced techniques that go beyond the basics. From intricate lamination to mastering complex pastry creams, this guide is designed for the baking enthusiast seeking a challenge. Unlock the secrets of professional pastry chefs and create stunning, show-stopping desserts that will leave your guests in awe. Get ready to push your culinary boundaries and embrace the artistry of advanced pastry techniques."
-      ,
+      "content": "Elevate your pastry skills to new heights as we delve into advanced techniques that go beyond the basics. From intricate lamination to mastering complex pastry creams, this guide is designed for the baking enthusiast seeking a challenge. Unlock the secrets of professional pastry chefs and create stunning, show-stopping desserts that will leave your guests in awe. Get ready to push your culinary boundaries and embrace the artistry of advanced pastry techniques.",
       "likes": 15
+    },
+    {
+      "title": "New Post",
+      "content": "How many likes",
+      "date": "2023-12-28",
+      "id": 7,
+      "likes": 7
     }
   ],
   "users": [
