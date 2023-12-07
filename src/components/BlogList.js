@@ -3,7 +3,7 @@ import BlogPost from "./BlogPost";
 import "../index.css";
 import notFoundImage from "../img/SearchResultNotFound.png";
 
-const BlogList = ({ posts, removePost }) => {
+const BlogList = ({ posts, removePost, addLike }) => {
   if (posts.length === 0) {
     return (
       <div className="container mx-auto mt-10">
@@ -29,6 +29,8 @@ const BlogList = ({ posts, removePost }) => {
             title={post.title}
             date={post.date}
             content={post.content}
+            likes={post.likes}
+            addLike={addLike}
             removePost={removePost}
           />
         ))}

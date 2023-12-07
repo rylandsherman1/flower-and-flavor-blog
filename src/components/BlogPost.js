@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import "../index.css";
 
 
+const BlogPost = ({ id, title, date, content, likes, addLike, removePost }) => {
 
-const BlogPost = ({ id, title, date, content, removePost }) => {
   const [like, setLike] = useState(false);
-  const [count, setCount] = useState(0);
-
-  const handleButtonClick = () => {
-    setCount(count + 1);
+  
+  const postLike = () => {
+    const updateLikes = likes + 1;
     setLike(true);
-  };
+
+
+    fetch(`http://localhost:8001/posts/${id}`,{
+      method:"PATCH",
+      headers: {
+      "Content-type": "application/json"},
+      body: JSON.stringify({likes: updateLikes})
+    }).then(() => {
+      addLike(id)
+     
+    })
+    
+  }
 
 const deletePost = () => {
   fetch(`http://localhost:8001/posts/${id}`, {
@@ -28,16 +39,17 @@ const deletePost = () => {
       <div className="blog-post-content">{content}</div>
 
       <div className="details">
+        <p className="blog-post-likes">{likes}</p>
+        
         {like ? (
-          <button className="like-button active" onClick={handleButtonClick}>
-            {count}♥
-          </button>
-        ) : (
-          <button className="like-button" onClick={() => setLike(true)}>
+        <button className="like-button active" onClick={postLike}>
+             ♥
+        </button>
+          ) : (
+        <button className="like-button" onClick={postLike}>
             ♡
-          </button>
-        )}
-
+        </button>
+)}
         <button
           className="delete-button"
           onClick={deletePost}
@@ -50,3 +62,8 @@ const deletePost = () => {
 };
 
 export default BlogPost;
+
+
+
+
+
