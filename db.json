@@ -4,31 +4,36 @@
       "id": 1,
       "title": "The Secret of Perfect Croissants",
       "date": "2023-05-01",
-      "content": "Discover the art of making buttery, flaky croissants at home..."
+      "content": "Discover the art of making buttery, flaky croissants at home...",
+      "likes": 27
     },
     {
       "id": 2,
       "title": "Exploring the World of Artisanal Sourdough",
       "date": "2023-05-15",
-      "content": "Sourdough bread has been a beloved staple for centuries..."
+      "content": "Sourdough bread has been a beloved staple for centuries...",
+      "likes": 22
     },
     {
       "id": 3,
       "title": "Perfecting the Art of Baking: Mastering the Chocolate Chip Cookie",
       "date": "2023-05-20",
-      "content": "Its simplicity belies the complexity of achieving that perfect balance of crispy edges and chewy centers, with the right hint of sweetness and a symphony of chocolate..."
+      "content": "Its simplicity belies the complexity of achieving that perfect balance of crispy edges and chewy centers, with the right hint of sweetness and a symphony of chocolate...",
+      "likes": 27
     },
     {
       "title": "test",
       "content": "test",
       "date": "2023-12-06",
-      "id": 4
+      "id": 4,
+      "likes": null
     },
     {
       "title": "test",
       "content": "test",
       "date": "2023-12-12",
-      "id": 5
+      "id": 5,
+      "likes": null
     }
   ],
   "users": [
