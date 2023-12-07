@@ -28,7 +28,7 @@ const Navbar = () => {
           <img
             src={image}
             alt="Flowers & Flavor Logo"
-            className="z-30 h-28 md:h-40"
+            className="z-30 h-28 md:h-40 logo"
           />
         </Link>
         {/* Hamburger Menu Icon */}
@@ -38,29 +38,29 @@ const Navbar = () => {
 
         {/* Desktop menu. Hidden on small screens */}
         <ul className="hidden md:flex justify-end flex-1">
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/">Home</Link>
           </li>
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/about">About</Link>
           </li>
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-        {/* This section is the mobile menu. only visible on small screens */}
+        {/* Mobile menu */}
         <ul
           className={`absolute md:hidden bg-custom-peach flex flex-col items-center w-full left-0 top-full transform ${
             nav ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/">Home</Link>
           </li>
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/about">About</Link>
           </li>
-          <li className="p-4 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-lg">
+          <li className="p-6 hover:bg-custom-darker-brown hover:text-white transition duration-300 cursor-pointer text-2xl">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>

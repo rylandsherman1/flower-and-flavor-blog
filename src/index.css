@@ -149,3 +149,7 @@ p {
 .like-button {
   margin-left: 10px;
 }
+
+.logo {
+  transform: scale(1.15);
+}
