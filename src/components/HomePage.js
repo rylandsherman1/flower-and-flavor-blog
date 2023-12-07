@@ -9,6 +9,8 @@ const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
+  const [isEditing, setIsEditing] = useState(false); 
+  const [editPost, setEditPost] = useState(null); 
 
   useEffect(() => {
     fetch(postAPI)
@@ -30,20 +32,52 @@ const HomePage = () => {
   };
 
   const handlePostSubmit = (formData) => {
-    fetch(postAPI, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then((response) => {
-      if (response.ok) {
-        // After successful submission, render the posts
-        refetchPosts();
-      } else {
-        throw new Error("Failed to submit blog post");
-      }
-    });
+    if (isEditing) {
+
+      fetch(`${postAPI}/${editPost.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then((response) => {
+        if (response.ok) {
+          refetchPosts();
+          setIsEditing(false);
+          setEditPost(null);
+        } else {
+          throw new Error("Failed to update blog post");
+        }
+      });
+    } else {
+
+      fetch(postAPI, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then((response) => {
+        if (response.ok) {
+          refetchPosts();
+        } else {
+          throw new Error("Failed to submit blog post");
+        }
+      });
+    }
+  };
+
+  const handleContentUpdate = (postId, updatedContent, updatedTitle, updatedDate) => {
+    const updatedPosts = posts.map((post) =>
+      post.id === postId ? { ...post, content: updatedContent, title: updatedTitle, date: updatedDate } : post
+    );
+    setPosts(updatedPosts);
+  };
+  
+
+  const handleEditClick = (postId, updatedContent) => {
+    setEditPost(postId);
+    setIsEditing(true);
   };
 
   const removePost = (id) => {
@@ -79,12 +113,15 @@ const HomePage = () => {
       setFilteredPosts(filtered);
     }
   };
+
   return (
     <div>
       <HomeNav onSearch={handleSearch} onPostSubmit={handlePostSubmit} />
       <BlogList
         posts={hasSearched ? filteredPosts : posts}
         removePost={removePost}
+        onEditClick={handleEditClick}
+        onContentUpdate={handleContentUpdate}
         addLike={addLike}
       />
     </div>
