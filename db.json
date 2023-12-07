@@ -31,5 +31,14 @@
       "password": "password2"
     }
   ],
-  "contacts": []
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Doe",
+      "email": "joe.doe@gmail.com",
+      "phoneNumber": "123-456-7890",
+      "description": "test"
+    }
+  ]
 }
