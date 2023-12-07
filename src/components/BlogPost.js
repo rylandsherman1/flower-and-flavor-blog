@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../index.css";
 
+
 const BlogPost = ({ id, title, date, content, likes, addLike, removePost }) => {
+
   const [like, setLike] = useState(false);
   
   const postLike = () => {
@@ -20,6 +22,15 @@ const BlogPost = ({ id, title, date, content, likes, addLike, removePost }) => {
     })
     
   }
+
+const deletePost = () => {
+  fetch(`http://localhost:8001/posts/${id}`, {
+    method: "DELETE"
+  }).then(() => {
+    removePost(id)
+  })
+  
+}
 
   return (
     <div className="blog-post">
@@ -41,9 +52,7 @@ const BlogPost = ({ id, title, date, content, likes, addLike, removePost }) => {
 )}
         <button
           className="delete-button"
-          onClick={() => {
-            removePost(id);
-          }}
+          onClick={deletePost}
         >
           🗑
         </button>
